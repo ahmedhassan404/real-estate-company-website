@@ -60,19 +60,19 @@ export default function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-blue-600 text-white text-center">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-blue-600 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
-          <p className="text-2xl text-blue-100">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Get In Touch</h1>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100">
             We'd love to hear from you. Reach out to us for any inquiries.
           </p>
         </div>
       </section>
 
       {/* Contact Cards */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {contactCards.map((card, idx) => {
               const Icon = card.icon;
               return (
@@ -107,9 +107,9 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Map */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -216,7 +216,7 @@ export default function Contact() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
@@ -261,7 +261,7 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white text-center">
+      <section className="py-12 sm:py-20 bg-blue-600 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -269,17 +269,17 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Ready to Find Your Dream Property?
             </h2>
-            <p className="text-2xl text-blue-100 mb-12">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 sm:mb-12">
               Let our expert team guide you through Dubai's finest properties
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <button className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base">
                 Browse Properties
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base">
                 Book Consultation
               </button>
             </div>
