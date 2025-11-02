@@ -218,7 +218,13 @@ export default function Contact() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-blue-50 rounded-lg p-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-blue-50 rounded-lg p-8"
+            >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Schedule a Viewing
               </h3>
@@ -228,16 +234,22 @@ export default function Contact() {
               <p className="text-gray-600 text-sm">
                 Our expert consultants are available to answer all your questions and help you find the perfect property that meets your needs and budget.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-blue-50 rounded-lg p-8">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-blue-50 rounded-lg p-8"
+            >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Investment Opportunities
               </h3>
               <p className="text-gray-700 mb-4">
                 Looking to invest in Dubai real estate? Our team can provide you with market insights, ROI analysis, and exclusive investment opportunities tailored to your financial goals.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -245,7 +257,13 @@ export default function Contact() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <h2 className="text-5xl font-bold mb-6">
             Ready to Find Your Dream Property?
           </h2>
           <p className="text-2xl text-blue-100 mb-12">
@@ -259,6 +277,7 @@ export default function Contact() {
               Book Consultation
             </button>
           </div>
+          </motion.div>
         </div>
       </section>
 
