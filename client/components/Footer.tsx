@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { Building2, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  Building2,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -11,12 +17,17 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Building2 className="w-6 h-6 text-blue-400" />
               <div className="flex flex-col">
-                <span className="text-sm font-bold">Dubai Prime Properties</span>
-                <span className="text-xs text-gray-400">Luxury Real Estate</span>
+                <span className="text-sm font-bold">
+                  Dubai Prime Properties
+                </span>
+                <span className="text-xs text-gray-400">
+                  Luxury Real Estate
+                </span>
               </div>
             </div>
             <p className="text-sm text-gray-400">
-              Your trusted partner in finding luxury properties in Dubai since 2010.
+              Your trusted partner in finding luxury properties in Dubai since
+              2010.
             </p>
           </div>
 
@@ -30,17 +41,26 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <a href="#properties" className="hover:text-white transition-colors">
+                <a
+                  href="#properties"
+                  className="hover:text-white transition-colors"
+                >
                   Properties
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>

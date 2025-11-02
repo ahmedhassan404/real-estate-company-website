@@ -2,12 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,17 +26,23 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@dubaiprimeproperties.ae", "sales@dubaiprimeproperties.ae"],
+      details: [
+        "info@dubaiprimeproperties.ae",
+        "sales@dubaiprimeproperties.ae",
+      ],
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: ["Sunday - Thursday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM"],
+      details: [
+        "Sunday - Thursday: 9:00 AM - 6:00 PM",
+        "Saturday: 10:00 AM - 4:00 PM",
+      ],
     },
   ];
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -229,10 +230,13 @@ export default function Contact() {
                 Schedule a Viewing
               </h3>
               <p className="text-gray-700 mb-4">
-                Interested in viewing one of our properties? Contact us to schedule a personalized tour at your convenience.
+                Interested in viewing one of our properties? Contact us to
+                schedule a personalized tour at your convenience.
               </p>
               <p className="text-gray-600 text-sm">
-                Our expert consultants are available to answer all your questions and help you find the perfect property that meets your needs and budget.
+                Our expert consultants are available to answer all your
+                questions and help you find the perfect property that meets your
+                needs and budget.
               </p>
             </motion.div>
 
@@ -247,7 +251,9 @@ export default function Contact() {
                 Investment Opportunities
               </h3>
               <p className="text-gray-700 mb-4">
-                Looking to invest in Dubai real estate? Our team can provide you with market insights, ROI analysis, and exclusive investment opportunities tailored to your financial goals.
+                Looking to invest in Dubai real estate? Our team can provide you
+                with market insights, ROI analysis, and exclusive investment
+                opportunities tailored to your financial goals.
               </p>
             </motion.div>
           </div>
@@ -264,19 +270,19 @@ export default function Contact() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-5xl font-bold mb-6">
-            Ready to Find Your Dream Property?
-          </h2>
-          <p className="text-2xl text-blue-100 mb-12">
-            Let our expert team guide you through Dubai's finest properties
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Browse Properties
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Book Consultation
-            </button>
-          </div>
+              Ready to Find Your Dream Property?
+            </h2>
+            <p className="text-2xl text-blue-100 mb-12">
+              Let our expert team guide you through Dubai's finest properties
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Browse Properties
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Book Consultation
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>

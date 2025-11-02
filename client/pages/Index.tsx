@@ -12,7 +12,8 @@ export default function Index() {
       title: "Luxury Waterfront Villa",
       location: "Palm Jumeirah",
       price: "AED 25,000,000",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=400&fit=crop",
       beds: 6,
       baths: 7,
       sqft: "8,500 sq ft",
@@ -22,7 +23,8 @@ export default function Index() {
       title: "Modern Penthouse",
       location: "Downtown Dubai",
       price: "AED 18,500,000",
-      image: "https://images.unsplash.com/photo-1545321503-87f68f0dbbf7?w=500&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1545321503-87f68f0dbbf7?w=500&h=400&fit=crop",
       beds: 4,
       baths: 5,
       sqft: "6,200 sq ft",
@@ -32,7 +34,8 @@ export default function Index() {
       title: "Executive Apartment",
       location: "Dubai Marina",
       price: "AED 8,900,000",
-      image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop",
       beds: 3,
       baths: 4,
       sqft: "3,800 sq ft",
@@ -315,8 +318,8 @@ export default function Index() {
               </p>
               <p className="text-gray-600 text-sm">
                 Our expert consultants are available to answer all your
-                questions and help you find the perfect property that meets
-                your needs and budget.
+                questions and help you find the perfect property that meets your
+                needs and budget.
               </p>
             </motion.div>
 
@@ -331,8 +334,8 @@ export default function Index() {
                 Investment Opportunities
               </h3>
               <p className="text-gray-700 mb-4">
-                Looking to invest in Dubai real estate? Our team can provide
-                you with market insights, ROI analysis, and exclusive investment
+                Looking to invest in Dubai real estate? Our team can provide you
+                with market insights, ROI analysis, and exclusive investment
                 opportunities tailored to your financial goals.
               </p>
             </motion.div>
