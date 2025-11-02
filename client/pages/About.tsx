@@ -131,18 +131,18 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
               Our Core Values
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               The principles that guide everything we do
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12">
             {values.map((value, idx) => (
               <motion.div
                 key={idx}
@@ -168,39 +168,39 @@ export default function About() {
       </section>
 
       {/* Team Stats */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-12 sm:py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-blue-100">Years of Excellence</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">15+</div>
+              <div className="text-xs sm:text-sm md:text-base text-blue-100">Years of Excellence</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">2000+</div>
-              <div className="text-blue-100">Happy Clients</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">2000+</div>
+              <div className="text-xs sm:text-sm md:text-base text-blue-100">Happy Clients</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-blue-100">Properties Sold</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">500+</div>
+              <div className="text-xs sm:text-sm md:text-base text-blue-100">Properties Sold</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-blue-100">Expert Agents</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">50+</div>
+              <div className="text-xs sm:text-sm md:text-base text-blue-100">Expert Agents</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us - Detailed */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Choose Us
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12">
             <div>
               <h3 className="text-xl font-bold text-blue-600 mb-3">
                 Local Expertise
