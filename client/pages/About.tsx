@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function About() {
   const values = [
