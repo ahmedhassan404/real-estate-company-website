@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -74,7 +75,14 @@ export default function Contact() {
             {contactCards.map((card, idx) => {
               const Icon = card.icon;
               return (
-                <div key={idx} className="text-center border rounded-lg p-8 hover:shadow-lg transition-shadow">
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="text-center border rounded-lg p-8 hover:shadow-lg transition-shadow"
+                >
                   <div className="flex justify-center mb-4">
                     <div className="bg-blue-100 rounded-full p-4">
                       <Icon className="w-8 h-8 text-blue-600" />
@@ -90,7 +98,7 @@ export default function Contact() {
                       </p>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
