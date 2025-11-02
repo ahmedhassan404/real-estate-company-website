@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { MapPin, Home, Users, Building2, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function Index() {
   const properties = [
@@ -106,9 +108,12 @@ export default function Index() {
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Started
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link
+                  to="/about"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center"
+                >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -189,24 +194,37 @@ export default function Index() {
       {/* Why Choose Us - Features */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold mb-4">
               Why Choose Dubai Prime Properties
             </h2>
             <p className="text-xl text-blue-100">
               Your trusted partner in Dubai real estate
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div key={idx} className="bg-white bg-opacity-10 rounded-lg p-8">
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="bg-white bg-opacity-10 rounded-lg p-8"
+                >
                   <Icon className="w-12 h-12 mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
                   <p className="text-blue-100">{feature.description}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -230,20 +248,32 @@ export default function Index() {
       {/* Why Choose Section - Detailed */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us
             </h2>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {whyChoose.map((item, idx) => (
-              <div key={idx}>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 <h3 className="text-xl font-bold text-blue-600 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -253,7 +283,13 @@ export default function Index() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-blue-50 rounded-lg p-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-blue-50 rounded-lg p-8"
+            >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Schedule a Viewing
               </h3>
@@ -266,9 +302,15 @@ export default function Index() {
                 questions and help you find the perfect property that meets
                 your needs and budget.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-blue-50 rounded-lg p-8">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-blue-50 rounded-lg p-8"
+            >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Investment Opportunities
               </h3>
@@ -277,7 +319,7 @@ export default function Index() {
                 you with market insights, ROI analysis, and exclusive investment
                 opportunities tailored to your financial goals.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -285,23 +327,30 @@ export default function Index() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-bold mb-6">
-            Ready to Find Your Dream Property?
-          </h2>
-          <p className="text-2xl text-blue-100 mb-12">
-            Let our expert team guide you through Dubai's finest properties
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Browse Properties
-            </button>
-            <Link
-              to="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
-            >
-              Book Consultation
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <h2 className="text-5xl font-bold mb-6">
+              Ready to Find Your Dream Property?
+            </h2>
+            <p className="text-2xl text-blue-100 mb-12">
+              Let our expert team guide you through Dubai's finest properties
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Browse Properties
+              </button>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
