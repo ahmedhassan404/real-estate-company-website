@@ -76,20 +76,32 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-white rounded-lg p-8 shadow-lg"
+            >
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700 text-lg">
                 To provide exceptional real estate services by connecting clients with their perfect properties while delivering unparalleled expertise, integrity, and personalized attention throughout every transaction.
               </p>
-            </div>
+            </motion.div>
 
             {/* Vision */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-white rounded-lg p-8 shadow-lg"
+            >
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-700 text-lg">
                 To be the most trusted and innovative real estate agency in Dubai, recognized for our commitment to excellence, client satisfaction, and our role in shaping the future of luxury living in the UAE.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -108,7 +120,14 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {values.map((value, idx) => (
-              <div key={idx} className="flex gap-6">
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="flex gap-6"
+              >
                 <div className="flex-shrink-0">
                   <CheckCircle className="w-8 h-8 text-blue-600 mt-1" />
                 </div>
@@ -118,7 +137,7 @@ export default function About() {
                   </h3>
                   <p className="text-gray-700">{value.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
