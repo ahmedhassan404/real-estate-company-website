@@ -130,8 +130,12 @@ export default function Index() {
                   key={idx}
                   className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-3 sm:p-6 text-center"
                 >
-                  <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">{stat.count}</div>
-                  <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
+                    {stat.count}
+                  </div>
+                  <div className="text-xs sm:text-sm text-gray-300">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -256,8 +260,12 @@ export default function Index() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">{stat.number}</div>
-                <div className="text-xs sm:text-sm md:text-base text-blue-100">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-blue-100">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -291,7 +299,9 @@ export default function Index() {
                 <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-2 sm:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">{item.description}</p>
+                <p className="text-sm sm:text-base text-gray-600">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>

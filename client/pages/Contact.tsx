@@ -62,7 +62,9 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-blue-600 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Get In Touch</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
+            Get In Touch
+          </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100">
             We'd love to hear from you. Reach out to us for any inquiries.
           </p>

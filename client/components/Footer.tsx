@@ -33,7 +33,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
               <li>
                 <Link to="/" className="hover:text-white transition-colors">
@@ -69,7 +71,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              Services
+            </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -96,7 +100,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact Us</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              Contact Us
+            </h3>
             <div className="text-xs sm:text-sm text-gray-400 space-y-2">
               <p>Sheikh Zayed Road, Dubai</p>
               <p>+971 4 XXX XXXX</p>
