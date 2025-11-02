@@ -32,7 +32,7 @@ export default function About() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 bg-gray-900 text-white overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-32 bg-gray-900 text-white overflow-hidden">
         <div
           className="absolute inset-0 opacity-40"
           style={{
@@ -44,23 +44,23 @@ export default function About() {
         />
         <div className="absolute inset-0 bg-black opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
             About Dubai Prime Properties
           </h1>
-          <p className="text-2xl text-gray-300">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300">
             Your Trusted Real Estate Partner Since 2010
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Story</h2>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-6 text-gray-700 text-lg">
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6 text-gray-700 text-base sm:text-lg">
             <p>
               Founded in 2010, Dubai Prime Properties has established itself as
               one of the leading real estate agencies in the UAE. With over 15
@@ -86,21 +86,21 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12">
             {/* Mission */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-white rounded-lg p-8 shadow-lg"
+              className="bg-white rounded-lg p-6 sm:p-8 shadow-lg"
             >
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-700 text-base sm:text-lg">
                 To provide exceptional real estate services by connecting
                 clients with their perfect properties while delivering
                 unparalleled expertise, integrity, and personalized attention
