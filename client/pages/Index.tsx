@@ -97,29 +97,29 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                 Discover Your Dream Property in Dubai
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
                 Premium real estate solutions in the heart of the UAE
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base">
                   Get Started
                 </button>
                 <Link
                   to="/about"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors inline-block text-center text-sm sm:text-base"
                 >
                   Learn More
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {[
                 { count: "500+", label: "Properties Listed" },
                 { count: "2,000+", label: "Happy Clients" },
@@ -128,10 +128,10 @@ export default function Index() {
               ].map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center"
+                  className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-3 sm:p-6 text-center"
                 >
-                  <div className="text-3xl font-bold mb-2">{stat.count}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">{stat.count}</div>
+                  <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -140,24 +140,24 @@ export default function Index() {
       </section>
 
       {/* Featured Properties */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Featured Properties
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               Explore our handpicked selection of luxury properties
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
             {properties.map((property, index) => (
               <motion.div
                 key={property.id}
@@ -211,24 +211,24 @@ export default function Index() {
       </section>
 
       {/* Why Choose Us - Features */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-12 sm:py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Why Choose Dubai Prime Properties
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-base sm:text-lg md:text-xl text-blue-100">
               Your trusted partner in Dubai real estate
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
