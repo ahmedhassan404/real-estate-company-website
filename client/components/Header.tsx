@@ -28,8 +28,12 @@ export default function Header() {
         <Link to="/" className={headerStyles.logo}>
           <Building2 className="w-6 h-6 text-blue-600" />
           <div className={headerStyles.logoText}>
-            <span className={headerStyles.logoTitle}>Dubai Prime Properties</span>
-            <span className={headerStyles.logoSubtitle}>Luxury Real Estate</span>
+            <span className={headerStyles.logoTitle}>
+              Dubai Prime Properties
+            </span>
+            <span className={headerStyles.logoSubtitle}>
+              Luxury Real Estate
+            </span>
           </div>
         </Link>
 
@@ -52,11 +56,7 @@ export default function Header() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 

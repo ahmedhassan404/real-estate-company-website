@@ -37,17 +37,23 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@dubaiprimeproperties.ae", "sales@dubaiprimeproperties.ae"],
+      details: [
+        "info@dubaiprimeproperties.ae",
+        "sales@dubaiprimeproperties.ae",
+      ],
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: ["Sunday - Thursday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM"],
+      details: [
+        "Sunday - Thursday: 9:00 AM - 6:00 PM",
+        "Saturday: 10:00 AM - 4:00 PM",
+      ],
     },
   ];
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -65,12 +71,18 @@ export default function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className={`pt-24 sm:pt-32 pb-12 sm:pb-16 ${colors.primary.dark} text-white text-center`}>
+      <section
+        className={`pt-24 sm:pt-32 pb-12 sm:pb-16 ${colors.primary.dark} text-white text-center`}
+      >
         <div className={containers.withPadding}>
-          <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4`}>
+          <h1
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4`}
+          >
             Get In Touch
           </h1>
-          <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100`}>
+          <p
+            className={`text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100`}
+          >
             We'd love to hear from you. Reach out to us for any inquiries.
           </p>
         </div>
@@ -79,7 +91,9 @@ export default function Contact() {
       {/* Contact Cards */}
       <section className={layouts.mainSection}>
         <div className={containers.withPadding}>
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8`}
+          >
             {contactCards.map((card, idx) => {
               const Icon = card.icon;
               return (
@@ -96,7 +110,9 @@ export default function Contact() {
                       <Icon className="w-8 h-8 text-blue-600" />
                     </div>
                   </div>
-                  <h3 className={`text-xl font-bold ${colors.text.primary} mb-4`}>
+                  <h3
+                    className={`text-xl font-bold ${colors.text.primary} mb-4`}
+                  >
                     {card.title}
                   </h3>
                   <div className={`space-y-2 ${colors.text.muted}`}>
@@ -130,7 +146,8 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className={contactSection.form}>
                 <div>
                   <label className={contactSection.label}>
-                    Full Name <span className={contactSection.labelRequired}>*</span>
+                    Full Name{" "}
+                    <span className={contactSection.labelRequired}>*</span>
                   </label>
                   <input
                     type="text"
@@ -145,7 +162,8 @@ export default function Contact() {
 
                 <div>
                   <label className={contactSection.label}>
-                    Email Address <span className={contactSection.labelRequired}>*</span>
+                    Email Address{" "}
+                    <span className={contactSection.labelRequired}>*</span>
                   </label>
                   <input
                     type="email"
@@ -172,7 +190,8 @@ export default function Contact() {
 
                 <div>
                   <label className={contactSection.label}>
-                    Message <span className={contactSection.labelRequired}>*</span>
+                    Message{" "}
+                    <span className={contactSection.labelRequired}>*</span>
                   </label>
                   <textarea
                     name="message"
@@ -233,10 +252,13 @@ export default function Contact() {
             >
               <h3 className={featureSection.title}>Schedule a Viewing</h3>
               <p className={`${featureSection.description} mb-4`}>
-                Interested in viewing one of our properties? Contact us to schedule a personalized tour at your convenience.
+                Interested in viewing one of our properties? Contact us to
+                schedule a personalized tour at your convenience.
               </p>
               <p className={`text-gray-600 text-sm`}>
-                Our expert consultants are available to answer all your questions and help you find the perfect property that meets your needs and budget.
+                Our expert consultants are available to answer all your
+                questions and help you find the perfect property that meets your
+                needs and budget.
               </p>
             </motion.div>
 
@@ -249,7 +271,9 @@ export default function Contact() {
             >
               <h3 className={featureSection.title}>Investment Opportunities</h3>
               <p className={featureSection.description}>
-                Looking to invest in Dubai real estate? Our team can provide you with market insights, ROI analysis, and exclusive investment opportunities tailored to your financial goals.
+                Looking to invest in Dubai real estate? Our team can provide you
+                with market insights, ROI analysis, and exclusive investment
+                opportunities tailored to your financial goals.
               </p>
             </motion.div>
           </div>
@@ -266,13 +290,17 @@ export default function Contact() {
             viewport={{ once: true, margin: "-100px" }}
             className={ctaSection.container}
           >
-            <h2 className={ctaSection.title}>Ready to Find Your Dream Property?</h2>
+            <h2 className={ctaSection.title}>
+              Ready to Find Your Dream Property?
+            </h2>
             <p className={ctaSection.subtitle}>
               Let our expert team guide you through Dubai's finest properties
             </p>
             <div className={ctaSection.buttonGroup}>
               <button className={buttonStyles.white}>Browse Properties</button>
-              <button className={buttonStyles.whiteBorder}>Book Consultation</button>
+              <button className={buttonStyles.whiteBorder}>
+                Book Consultation
+              </button>
             </div>
           </motion.div>
         </div>

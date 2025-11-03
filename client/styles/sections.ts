@@ -44,8 +44,10 @@ export const contactSection = {
   formGroup: "space-y-0",
   label: "block text-sm font-semibold text-gray-900 mb-2",
   labelRequired: "text-red-500",
-  input: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600",
-  textarea: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none",
+  input:
+    "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600",
+  textarea:
+    "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none",
   mapContainer: "rounded-lg overflow-hidden h-96",
 };
 
