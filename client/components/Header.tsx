@@ -1,84 +1,91 @@
 import { Link } from "react-router-dom";
 import { Building2, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { layouts, flexLayouts, containers } from "@/styles/containers";
+import { colors, zIndex } from "@/styles/theme";
+
+const headerStyles = {
+  wrapper: `${layouts.header}`,
+  inner: `${containers.withPadding} flex items-center justify-between h-20`,
+  logo: `flex items-center gap-2 flex-shrink-0`,
+  logoText: `flex flex-col`,
+  logoTitle: `text-xs sm:text-sm font-bold ${colors.text.primary}`,
+  logoSubtitle: `text-xs text-gray-500`,
+  navDesktop: `hidden md:flex items-center gap-8`,
+  navLink: `text-sm ${colors.text.secondary} hover:text-blue-600 transition-colors`,
+  mobileMenuBtn: `md:hidden p-2 ${colors.text.secondary} hover:text-blue-600 transition-colors`,
+  navMobile: `md:hidden pb-4 border-t border-gray-200`,
+  navMobileLink: `block py-2 ${colors.text.secondary} hover:text-blue-600 transition-colors`,
+};
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <Building2 className="w-6 h-6 text-blue-600" />
-            <div className="flex flex-col">
-              <span className="text-xs sm:text-sm font-bold text-gray-900">
-                Dubai Prime Properties
-              </span>
-              <span className="text-xs text-gray-500">Luxury Real Estate</span>
-            </div>
+    <header className={headerStyles.wrapper}>
+      <div className={headerStyles.inner}>
+        {/* Logo */}
+        <Link to="/" className={headerStyles.logo}>
+          <Building2 className="w-6 h-6 text-blue-600" />
+          <div className={headerStyles.logoText}>
+            <span className={headerStyles.logoTitle}>Dubai Prime Properties</span>
+            <span className={headerStyles.logoSubtitle}>Luxury Real Estate</span>
+          </div>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className={headerStyles.navDesktop}>
+          <Link to="/" className={headerStyles.navLink}>
+            Home
           </Link>
+          <Link to="/about" className={headerStyles.navLink}>
+            About Us
+          </Link>
+          <Link to="/contact" className={headerStyles.navLink}>
+            Contact
+          </Link>
+        </nav>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="/"
-              className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/contact"
-              className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Contact
-            </Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-200">
-            <Link
-              to="/"
-              className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              About Us
-            </Link>
-            <Link
-              to="/contact"
-              className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </nav>
-        )}
+        {/* Mobile Menu Button */}
+        <button
+          className={headerStyles.mobileMenuBtn}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
+        </button>
       </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <nav className={headerStyles.navMobile}>
+          <Link
+            to="/"
+            className={headerStyles.navMobileLink}
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className={headerStyles.navMobileLink}
+            onClick={() => setIsOpen(false)}
+          >
+            About Us
+          </Link>
+          <Link
+            to="/contact"
+            className={headerStyles.navMobileLink}
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </nav>
+      )}
     </header>
   );
 }
